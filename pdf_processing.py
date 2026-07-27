@@ -1,7 +1,7 @@
 import fitz
 from pathlib import Path
 from statistics import mean
-from pdf_path import pdf_source
+from sources import pdf_source
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 

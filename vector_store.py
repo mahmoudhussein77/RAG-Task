@@ -1,6 +1,7 @@
 import faiss
 import numpy as np
 from pdf_processing import chunks
+from sources import saving_faiss_index_path
 from sentence_transformers import SentenceTransformer
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -33,7 +34,7 @@ def create_faiss_index(embeddings):
 faiss_index = create_faiss_index(embedding)
 
 
-faiss.write_index(faiss_index, r"D:\Mini_Document_Q&A\faiss_index.index")
+faiss.write_index(faiss_index, saving_faiss_index_path)
 
 
 def search(query, k=3):

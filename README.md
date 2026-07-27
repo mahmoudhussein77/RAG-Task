@@ -141,10 +141,15 @@ GROQ_API_KEY=your_api_key_here
 
 
 
-### 5. Add pdf path to pdf_path.py:
+### 5. Add paths to sources.py:
 
-pdf_source = your_pdf_path
+- pdf_source = your_pdf_path
 
+ex: pdf_source = r"D:\Mini_Document_Q&A\data\NexaFlow_S200_Manual.pdf"
+
+- saving_faiss_index_path = your_saving_faiss_index_location
+
+ex: saving_faiss_index_path = r"D:\Mini_Document_Q&A\database\faiss_index.index"
 
 
 ### 6. Running the API

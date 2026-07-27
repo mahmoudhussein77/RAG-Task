@@ -1,1 +1,0 @@
-pdf_source = r"D:\Mini_Document_Q&A\data\NexaFlow_S200_Manual.pdf"
