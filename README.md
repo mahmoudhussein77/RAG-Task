@@ -69,6 +69,15 @@ Mini\_Document\_Q\&A/
 └── README.md
 
 
+## Requirements:
+
+Before running the project, make sure you have:
+
+- Python 3.10 or later
+- Git
+- A Groq API Key
+- Internet connection (required for embedding model download and Groq API)
+
 
 
 ## Setup:
