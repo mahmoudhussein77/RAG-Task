@@ -1,41 +1,35 @@
-\# Mini Document Q\&A API
-
+# Mini Document Q\&A API:
 
 
 A Retrieval-Augmented Generation (RAG) system built with FastAPI. The application answers questions from a PDF document using FAISS for semantic search and Groq as the Large Language Model (LLM).
 
 
 
-## Development Note
+## Development Note:
 
 This project was implemented in approximately "7 hours", including project setup, PDF processing, embedding generation, FAISS indexing, RAG pipeline implementation, FastAPI integration, testing, and documentation.
 
 
 
-\## Features
+## Features:
+
+- Load and process PDF documents
+
+- Split text into chunks
+
+- Generate embeddings using Sentence Transformers
+
+- Store embeddings in a FAISS vector index
+
+- Retrieve the most relevant chunks
+
+- Generate answers using Groq
+
+- Return both the answer and source page numbers
 
 
 
-\- Load and process PDF documents
-
-\- Split text into chunks
-
-\- Generate embeddings using Sentence Transformers
-
-\- Store embeddings in a FAISS vector index
-
-\- Retrieve the most relevant chunks
-
-\- Generate answers using Groq
-
-\- Return both the answer and source page numbers
-
-
-
-
-
-\## Project Structure
-
+## Project Structure:
 
 
 Mini\_Document\_Q\&A/
@@ -78,21 +72,12 @@ Mini\_Document\_Q\&A/
 
 
 
+## Setup:
 
 
+### 1. Clone the repository
 
-
-\## Setup
-
-
-
-\### 1. Clone the repository
-
-
-
-\-> bash:
-
-
+-> bash:
 
 git clone https://github.com/mahmoudhussein77/RAG-Task.git
 
@@ -101,17 +86,12 @@ cd RAG-Task
 
 
 
+### 2. Create a virtual environment
 
 
+-> Windows:
 
-\### 2. Create a virtual environment
-
-
-
-\-> Windows:
-
-\-> bash:
-
+-> bash:
 
 
 python -m venv venv
@@ -121,11 +101,9 @@ venv\\Scripts\\activate
 ```
 
 
+-> Linux / macOS
 
-\-> Linux / macOS
-
-\-> bash:
-
+-> bash:
 
 
 python3 -m venv venv
@@ -135,114 +113,85 @@ source venv/bin/activate
 ```
 
 
+### 3. Install dependencies
 
 
-
-\### 3. Install dependencies
-
-
-
-\-> bash:
-
-
+-> bash:
 
 pip install -r requirements.txt
 
 ```
 
 
-
-
-
-\### 4. Create a `.env` file
-
+### 4. Create a `.env` file
 
 
 Add your Groq API key:
 
 
-
 ```env
 
-GROQ\_API\_KEY=your\_api\_key\_here
+GROQ_API_KEY=your_api_key_here
 
 ```
 
 
+### 5. Add pdf path to pdf_path.py:
 
-\### 5. Add pdf path to pdf\_path.py
-
-
-
+pdf_source = your_pdf_path
 
 
-\### 6. Running the API
 
+### 6. Running the API
 
 
 Start the FastAPI server:
 
-
-
-\-> bash:
+-> bash:
 
 uvicorn api:app --reload
 
 
+-> The API will be available at: http://127.0.0.1:8000
+
+-> Swagger documentation: http://127.0.0.1:8000/docs
+
+
+---
 
 
 
-\-> The API will be available at: http://127.0.0.1:8000
+## API Example:
 
 
-
-\-> Swagger documentation: http://127.0.0.1:8000/docs
-
-
-
-\---
-
-
-
-
-
-\## API Example
-
-
-
-\### POST `/ask`
-
+### POST `/ask`
 
 
 Request:
 
 
-
 ```json
 
 {
-
-&#x20;   "question": "What is the operating pressure?"
+   "question": "What is the operating pressure?"
 
 }
 
 ```
-
 
 
 Response:
 
 
-
 ```json
 
 {
 
-&#x20;   "answer": "The typical operating pressure is 10 to 14 bar.",
+      "answer": "The typical operating pressure is 10 to 14 bar.",
 
-&#x20;   "sources": {"page": 1}, {"page": 2},
+   "sources": {"page": 1}, {"page": 2},
 
-&#x20;   "found": true
+   "found": true
 
 }
 
@@ -250,25 +199,19 @@ Response:
 
 
 
-\---
+
+## Technologies Used:
 
 
+- Python
 
+- FastAPI
 
+- FAISS
 
-\## Technologies Used
+- Sentence Transformers
 
+- PyMuPDF (fitz)
 
-
-\- Python
-
-\- FastAPI
-
-\- FAISS
-
-\- Sentence Transformers
-
-\- PyMuPDF (fitz)
-
-\- Groq API
+- Groq API
 
