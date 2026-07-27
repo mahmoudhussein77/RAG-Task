@@ -181,7 +181,7 @@ Response:
 
 {
 
-      "answer": "The typical operating pressure is 10 to 14 bar.",
+   "answer": "The typical operating pressure is 10 to 14 bar.",
 
    "sources": {"page": 1}, {"page": 2},
 
