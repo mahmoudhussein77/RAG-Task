@@ -6,6 +6,10 @@ A Retrieval-Augmented Generation (RAG) system built with FastAPI. The applicatio
 
 
 
+## Development Note
+
+This project was implemented in approximately "7 hours", including project setup, PDF processing, embedding generation, FAISS indexing, RAG pipeline implementation, FastAPI integration, testing, and documentation.
+
 
 
 \## Features
