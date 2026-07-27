@@ -94,9 +94,9 @@ Mini\_Document\_Q\&A/
 
 
 
-git clone <repository\_url>
+git clone https://github.com/mahmoudhussein77/RAG-Task.git
 
-cd D:\\Mini\_Document\_Q\&A
+cd RAG-Task
 
 
 
