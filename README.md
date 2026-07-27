@@ -68,7 +68,6 @@ Mini\_Document\_Q\&A/
 
 └── README.md
 
-```
 
 
 
@@ -98,7 +97,6 @@ python -m venv venv
 
 venv\\Scripts\\activate
 
-```
 
 
 -> Linux / macOS
@@ -110,7 +108,7 @@ python3 -m venv venv
 
 source venv/bin/activate
 
-```
+
 
 
 ### 3. Install dependencies
@@ -120,7 +118,6 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-```
 
 
 ### 4. Create a `.env` file
@@ -129,11 +126,10 @@ pip install -r requirements.txt
 Add your Groq API key:
 
 
-```env
+-> .env:
 
 GROQ_API_KEY=your_api_key_here
 
-```
 
 
 ### 5. Add pdf path to pdf_path.py:
@@ -156,8 +152,6 @@ uvicorn api:app --reload
 
 -> Swagger documentation: http://127.0.0.1:8000/docs
 
-
----
 
 
 
