@@ -32,21 +32,25 @@ This project was implemented in approximately "7 hours", including project setup
 ## Project Structure:
 
 
-Mini\_Document\_Q\&A/
+Mini_Document_Q&A
 
 │
 
 ├── data/
 
-│   └── NexaFlow\_S200\_Manual.pdf
+│   └── NexaFlow_S200_Manual.pdf
+
+├── database/
+
+│   └── faiss_index.index
 
 │
 
-├── pdf\_processing.py
+├── pdf_processing.py
 
-├── pdf\_path.py
+├── sources.py
 
-├── vector\_store.py
+├── vector_store.py
 
 ├── llm.py
 
